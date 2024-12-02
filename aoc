@@ -1,0 +1,8 @@
+#!/usr/bin/sh
+
+day=$(echo $1 | cut -d'.' -f1)
+part=$(echo $1 | cut -d'.' -f2)
+
+cd "day$day"
+
+ghc "p$part" && exec "./p$part"
